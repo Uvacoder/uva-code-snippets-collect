@@ -1,0 +1,55 @@
+---
+layout: base.njk
+permalink: "{{ page.fileSlug }}"
+---
+{# tags: {% if  %} #}
+
+<div class="container">
+	{# link to homepage #}
+	<a href="/">Home</a>
+	
+	{# problem title #}
+	<h1>{{ title }}</h1>
+	
+	{# list tags inline #}
+	<div class="tags">
+		{% for tag in tags %}
+			<code>{{ tag }}</code>
+		{% endfor %}
+	</div>
+
+	
+	<article>
+		{# External Problem URL: binarysearch or Leetcode #}
+		<strong>The Problem</strong>: {% mdExternalLink title, problemUrl %}
+
+		{# Solution rendered from respective markdown files #}
+		{{ content | safe }}
+	</article>
+	
+	{# <aside>
+		<ul>
+		{%- for solution in collections.solutions -%}
+			<li>
+				<a href="/{{ solution.data.page.fileSlug | url_encode }}">{{solution.data.title}}</a>
+			</li>
+		{%- endfor -%}
+		</ul>
+	</aside> #}
+
+	<div class="controls">
+    {# navigate previous and next solution #}
+    {% if prevSol.url %}
+      <p>
+        <strong>Previous Solution</strong>: 
+        <a class="previous" href="{{ prevSol.url }}">{{ prevSol.data.title }}</a>
+      </p>
+    {% endif %}
+    {% if nextSol.url %}
+      <p>
+        <strong>Next Solution</strong>: 
+        <a class="next" href="{{ nextSol.url }}">{{ nextSol.data.title }}</a>
+      </p>
+    {% endif %}
+    </div>
+</div>
