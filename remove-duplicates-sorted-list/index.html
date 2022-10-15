@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.bunny.net">
+	<link href="https://fonts.bunny.net/css?family=ibm-plex-mono:400|inter:500" rel="stylesheet" />
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="https://cdn.statically.io/gh/PrismJS/prism-themes/447479fc/themes/prism-one-dark.min.css">
+	<title>Remove Duplicates from Sorted List</title>
+</head>
+<body>
+	<main>
+		
+
+<div class="container">
+	
+	<a href="/">Home</a>
+	
+	
+	<h1>Remove Duplicates from Sorted List</h1>
+	
+	
+	<div class="tags">
+		
+			<code>leetcode</code>
+		
+			<code>leetcode</code>
+		
+			<code>solutions</code>
+		
+			<code>python</code>
+		
+			<code>data structures</code>
+		
+			<code>linked list</code>
+		
+	</div>
+
+	
+	<article>
+		
+		<strong>The Problem</strong>: <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/" target="_blank" rel="noopener noreferrer">
+			Remove Duplicates from Sorted List
+			<img src="/assets/leetcode.png"/>			
+		</a>
+
+		
+		<p><strong>My Solution</strong>:</p>
+<pre class="language-py"><code class="language-py"><span class="token comment"># Definition for singly-linked list.</span><br><span class="token comment"># class ListNode:</span><br><span class="token comment">#     def __init__(self, val=0, next=None):</span><br><span class="token comment">#         self.val = val</span><br><span class="token comment">#         self.next = next</span><br><br><span class="token keyword">def</span> <span class="token function">deleteDuplicates</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">:</span><br>		<span class="token comment"># empty or single item list</span><br>		<span class="token keyword">if</span> <span class="token keyword">not</span> head <span class="token keyword">or</span> <span class="token keyword">not</span> head<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">:</span><br>				<span class="token keyword">return</span> head<br><br>		cur_node <span class="token operator">=</span> head<br><br>		<span class="token keyword">while</span> cur_node<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">:</span><br>				nxt_node <span class="token operator">=</span> cur_node<span class="token punctuation">.</span><span class="token builtin">next</span><br><br>				<span class="token keyword">if</span> cur_node<span class="token punctuation">.</span>val <span class="token operator">==</span> nxt_node<span class="token punctuation">.</span>val<span class="token punctuation">:</span><br>						cur_node<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> nxt_node<span class="token punctuation">.</span><span class="token builtin">next</span><br>				<span class="token keyword">else</span><span class="token punctuation">:</span><br>						cur_node <span class="token operator">=</span> cur_node<span class="token punctuation">.</span><span class="token builtin">next</span><br>						nxt_node <span class="token operator">=</span> nxt_node<span class="token punctuation">.</span><span class="token builtin">next</span><br><br>		<span class="token keyword">return</span> head</code></pre>
+
+	</article>
+	
+	
+
+	<div class="controls">
+    
+    
+      <p>
+        <strong>Previous Solution</strong>: 
+        <a class="previous" href="/only-duplicate/">Detect the Only Duplicate in a List</a>
+      </p>
+    
+    
+      <p>
+        <strong>Next Solution</strong>: 
+        <a class="next" href="/robinhood/">Robinhood</a>
+      </p>
+    
+    </div>
+</div>
+
+	</main>
+</body>
+</html>

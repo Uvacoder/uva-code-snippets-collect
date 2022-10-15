@@ -1,0 +1,88 @@
+html {
+	padding: 2rem 1rem;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	width: 100%;
+	background-color: #212529;
+	color: #f1f3f5;
+	margin: 0 auto;
+	max-width: 768px;
+}
+
+* {
+	transition: all 0.2s;
+	scrollbar-width: thin;
+}
+
+a {
+	text-decoration: underline #edae49 solid 0.2rem;
+	text-underline-offset: 0.35rem;
+	color: #f1f3f5;
+}
+
+a[href*="https://"]
+{
+	display: inline-flex;
+	align-items: center;
+}
+
+a[href*="https://"] > img
+{
+	width: 1.5rem;
+	height: 1.5rem;
+	object-fit: contain;
+	border-radius: 50%;
+	margin-left: 0.5rem;
+	flex-shrink: 0;
+}
+
+ul {
+	list-style-position: inside;
+	padding-left: 0;
+}
+
+li {
+	margin-bottom: 0.5rem;
+	list-style-type: square;
+}
+
+.tags {
+	margin-bottom: 1.5rem;
+}
+
+.tags > code {
+	display: inline-block;
+	margin-bottom: 0.25rem;
+	background-color: #495057;
+	color: #f8f9fa;
+	padding: 0.25rem 0.75rem;
+	border-radius: 999px;
+	font-size: 0.85rem;
+	line-height: 1;
+}
+
+pre,
+code {
+	font-family: "IBM Plex Mono", "Cascadia Code", monospace !important;
+}
+
+pre {
+	max-width: 100%;
+	padding: 1rem;
+	color: #f8f9fa;
+	border: 0.1rem solid #495057;
+	border-radius: 0.1rem;
+}
+
+pre,
+pre code {
+	background-color: #343a40 !important;
+}
+
+@media screen and (min-width: 1280px) {
+	body {
+		width: 50%;
+	}
+}

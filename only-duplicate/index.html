@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.bunny.net">
+	<link href="https://fonts.bunny.net/css?family=ibm-plex-mono:400|inter:500" rel="stylesheet" />
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="https://cdn.statically.io/gh/PrismJS/prism-themes/447479fc/themes/prism-one-dark.min.css">
+	<title>Detect the Only Duplicate in a List</title>
+</head>
+<body>
+	<main>
+		
+
+<div class="container">
+	
+	<a href="/">Home</a>
+	
+	
+	<h1>Detect the Only Duplicate in a List</h1>
+	
+	
+	<div class="tags">
+		
+			<code>binarysearch</code>
+		
+			<code>binarysearch</code>
+		
+			<code>solutions</code>
+		
+			<code>python</code>
+		
+			<code>two pointers</code>
+		
+			<code>array</code>
+		
+	</div>
+
+	
+	<article>
+		
+		<strong>The Problem</strong>: <a href="https://binarysearch.com/problems/Detect-the-Only-Duplicate-in-a-List" target="_blank" rel="noopener noreferrer">
+			Detect the Only Duplicate in a List
+			<img src="/assets/binarysearch.png"/>			
+		</a>
+
+		
+		<p><strong>My Solution</strong>:</p>
+<pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">solve</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span><br>    nums_sorted <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><br><br>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>        <span class="token keyword">if</span> i <span class="token operator">></span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">:</span><br>            <span class="token keyword">break</span><br><br>        a <span class="token operator">=</span> nums_sorted<span class="token punctuation">[</span>i<span class="token punctuation">]</span><br>        b <span class="token operator">=</span> nums_sorted<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><br><br>        <span class="token keyword">if</span> a <span class="token operator">==</span> b<span class="token punctuation">:</span><br>            <span class="token keyword">return</span> a</code></pre>
+
+	</article>
+	
+	
+
+	<div class="controls">
+    
+    
+      <p>
+        <strong>Previous Solution</strong>: 
+        <a class="previous" href="/longest-common-prefix/">Longest Common Prefix</a>
+      </p>
+    
+    
+      <p>
+        <strong>Next Solution</strong>: 
+        <a class="next" href="/remove-duplicates-sorted-list/">Remove Duplicates from Sorted List</a>
+      </p>
+    
+    </div>
+</div>
+
+	</main>
+</body>
+</html>

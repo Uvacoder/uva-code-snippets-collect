@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.bunny.net">
+	<link href="https://fonts.bunny.net/css?family=ibm-plex-mono:400|inter:500" rel="stylesheet" />
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="https://cdn.statically.io/gh/PrismJS/prism-themes/447479fc/themes/prism-one-dark.min.css">
+	<title>3-6-9</title>
+</head>
+<body>
+	<main>
+		
+
+<div class="container">
+	
+	<a href="/">Home</a>
+	
+	
+	<h1>3-6-9</h1>
+	
+	
+	<div class="tags">
+		
+			<code>binarysearch</code>
+		
+			<code>binarysearch</code>
+		
+			<code>solutions</code>
+		
+			<code>python</code>
+		
+	</div>
+
+	
+	<article>
+		
+		<strong>The Problem</strong>: <a href="https://binarysearch.com/problems/3-6-9" target="_blank" rel="noopener noreferrer">
+			3-6-9
+			<img src="/assets/binarysearch.png"/>			
+		</a>
+
+		
+		<p><strong>My Solution</strong>:</p>
+<pre class="language-py"><code class="language-py"><span class="token keyword">def</span> <span class="token function">solve</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span><br>    num_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><br><br>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span><br>        <span class="token keyword">if</span> i <span class="token operator">%</span> <span class="token number">3</span> <span class="token operator">==</span> <span class="token number">0</span> <span class="token keyword">or</span> <span class="token string">"3"</span> <span class="token keyword">in</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token string">"6"</span> <span class="token keyword">in</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token string">"9"</span> <span class="token keyword">in</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span><br>            num_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"clap"</span><span class="token punctuation">)</span><br>        <span class="token keyword">else</span><span class="token punctuation">:</span><br>            num_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><br><br>    <span class="token keyword">return</span> num_list</code></pre>
+
+	</article>
+	
+	
+
+	<div class="controls">
+    
+    
+    
+      <p>
+        <strong>Next Solution</strong>: 
+        <a class="next" href="/longest-common-prefix/">Longest Common Prefix</a>
+      </p>
+    
+    </div>
+</div>
+
+	</main>
+</body>
+</html>
