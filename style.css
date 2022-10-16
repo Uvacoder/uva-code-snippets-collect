@@ -27,6 +27,11 @@ a {
 	align-items: center;
 }
 
+.content > a[href*="https://"]
+{
+	margin-left: 0.25rem;
+}
+
 a[href*="https://"] + img
 {
 	width: 1.5rem;
