@@ -1,8 +1,6 @@
 ---
 layout: base.njk
-permalink: "{{ page.fileSlug | url }}"
 ---
-{# tags: {% if  %} #}
 
 <div class="container">
 	{# link to homepage #}
@@ -27,12 +25,12 @@ permalink: "{{ page.fileSlug | url }}"
 			{# add platform icon #}
 			{% set lc = r/leetcode/g %}
 			{% if lc.test(problemUrl) %}
-				<img src="{{ '/assets/leetcode.png' | url}}"/>
+				<img src="{{ '/assets/leetcode.png' | url }}"/>
 			{% endif %}
 
 			{% set bs = r/binarysearch/g %}
 			{% if bs.test(problemUrl) %}
-				<img src="{{ '/assets/binarysearch.png' | url}}"/>
+				<img src="{{ '/assets/binarysearch.png' | url }}"/>
 			{% endif %}
 		</span>
 

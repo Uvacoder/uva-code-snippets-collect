@@ -7,4 +7,9 @@
 ### TODO
 
 - add necessary meta tags
+- add 404 page
+- create own next/prev solution
+- filtering
+  - leetcode / binarysearch
+  - tag-based
 - add footer and header content

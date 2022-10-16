@@ -1,8 +1,6 @@
-// const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
-	// eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(syntaxHighlight);
 
 	eleventyConfig.addPassthroughCopy("src/style.css");
@@ -20,16 +18,6 @@ module.exports = function (eleventyConfig) {
 		// get list of solutions in ascending order
 		const solutions = collection
 			.getFilteredByTag("solutions")
-			.map((solution) => {
-				if (solution.data.problemUrl.toLowerCase().includes("leetcode")) {
-					solution.data.tags.unshift("leetcode");
-				} else if (
-					solution.data.problemUrl.toLowerCase().includes("binarysearch")
-				) {
-					solution.data.tags.unshift("binarysearch");
-				}
-				return solution;
-			})
 			.sort(function (a, b) {
 				return a.inputPath.localeCompare(b.inputPath);
 			});
@@ -47,9 +35,9 @@ module.exports = function (eleventyConfig) {
 	});
 
 	return {
-		pathPrefix: "/coding-problem-solutions/",
 		dir: {
 			input: "src"
-		}
+		},
+		pathPrefix: "/coding-problem-solutions/"
 	};
 };
