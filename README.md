@@ -7,9 +7,8 @@
 ### TODO
 
 - add necessary meta tags
+- add favicon
+- add all solutions to project and link them in readme
 - add 404 page
 - create own next/prev solution
-- filtering
-  - leetcode / binarysearch
-  - tag-based
 - add footer and header content
