@@ -22,13 +22,12 @@ a {
 	color: #f1f3f5;
 }
 
-a[href*="https://"]
-{
+.content {
 	display: inline-flex;
 	align-items: center;
 }
 
-a[href*="https://"] > img
+a[href*="https://"] + img
 {
 	width: 1.5rem;
 	height: 1.5rem;

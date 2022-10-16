@@ -1,6 +1,8 @@
+// const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
+	// eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(syntaxHighlight);
 
 	eleventyConfig.addPassthroughCopy("src/style.css");
@@ -8,17 +10,8 @@ module.exports = function (eleventyConfig) {
 
 	// add safe external links in markdown
 	eleventyConfig.addShortcode("mdExternalLink", function (text, url) {
-		let icon;
-
-		if (url.toLowerCase().includes("leetcode")) {
-			icon = `<img src="/assets/leetcode.png"/>`;
-		} else if (url.toLowerCase().includes("binarysearch")) {
-			icon = `<img src="/assets/binarysearch.png"/>`;
-		}
-
 		return `<a href="${url}" target="_blank" rel="noopener noreferrer">
 			${text}
-			${icon}			
 		</a>`;
 	});
 
@@ -54,6 +47,7 @@ module.exports = function (eleventyConfig) {
 	});
 
 	return {
+		pathPrefix: "/coding-problem-solutions/",
 		dir: {
 			input: "src"
 		}
