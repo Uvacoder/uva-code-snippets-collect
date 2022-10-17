@@ -1,11 +1,12 @@
 ---
 title: Coding Problem Solutions
-layout: home.njk
+description: List of my solutions to some coding problems on leetcode.com and binarysearch.com
+layout: base.njk
 ---
 
-<!-- description for main page -->
-
 ## Outline
+
+List of my solutions to some coding problems on [Leetcode](https://leetcode.com) and [binarysearch](https://binarysearch.com).
 
 <ul>
 {%- for solution in collections.solutions | sort -%}

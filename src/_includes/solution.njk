@@ -2,19 +2,22 @@
 layout: base.njk
 ---
 
-<div class="container">
-	{# link to homepage #}
-	<a href="{{ '/' | url }}">Home</a>
-	
-	{# problem title #}
-	<h1>{{ title }}</h1>
+<div class="solution">
+	{# link to homepage and current problem title #}
+	<section class="header">
+		<a href="{{ '/' | url }}">Outline</a>
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
+  		<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+		</svg>
+		<p>{{ title }}</p>
+	</section>
 	
 	{# list tags inline #}
-	<div class="tags">
+	<section class="tags">
 		{% for tag in tags %}
 			<code>{{ tag }}</code>
 		{% endfor %}
-	</div>
+	</section>
 
 	
 	<article>
@@ -38,7 +41,7 @@ layout: base.njk
 		{{ content | safe }}
 	</article>
 	
-	<div class="controls">
+	<section class="footer-navigation">
     {# navigate previous and next solution #}
     {% if prevSol.url %}
       <p>
@@ -52,5 +55,5 @@ layout: base.njk
         <a class="next" href="{{ nextSol.url | url }}">{{ nextSol.data.title }}</a>
       </p>
     {% endif %}
-    </div>
+    </section>
 </div>
