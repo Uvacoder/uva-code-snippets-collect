@@ -6,54 +6,61 @@ layout: base.njk
 	{# link to homepage and current problem title #}
 	<section class="header">
 		<a href="{{ '/' | url }}">Outline</a>
-		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
-  		<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke="currentColor">
+			<path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 		</svg>
 		<p>{{ title }}</p>
 	</section>
-	
+
 	{# list tags inline #}
 	<section class="tags">
 		{% for tag in tags %}
-			<code>{{ tag }}</code>
+		  <code>{{ tag }}</code>
 		{% endfor %}
 	</section>
 
-	
 	<article>
 		{# External Problem URL: binarysearch or Leetcode #}
 		<span class="content">
-			<strong>The Problem</strong>: {% mdExternalLink title, problemUrl %}
-
-			{# add platform icon #}
-			{% set lc = r/leetcode/g %}
-			{% if lc.test(problemUrl) %}
-				<img src="{{ '/assets/leetcode.png' | url }}"/>
-			{% endif %}
-
-			{% set bs = r/binarysearch/g %}
-			{% if bs.test(problemUrl) %}
-				<img src="{{ '/assets/binarysearch.png' | url }}"/>
+			<strong>The Problem</strong>: {% mdExternalLink title, problemUrl %} 
+      {# add platform icon #} 
+      {% set lc = r/leetcode/g %}
+      {% if lc.test(problemUrl) %}
+			  <img src="{{ '/assets/leetcode.png' | url }}" />
+			{% endif %} 
+      
+      {% set bs = r/binarysearch/g %}
+      {% if bs.test(problemUrl) %}
+			  <img src="{{ '/assets/binarysearch.png' | url }}" />
 			{% endif %}
 		</span>
 
 		{# Solution rendered from respective markdown files #}
 		{{ content | safe }}
 	</article>
-	
+
 	<section class="footer-navigation">
-    {# navigate previous and next solution #}
-    {% if prevSol.url %}
-      <p>
-        <strong>Previous Solution</strong>: 
-        <a class="previous" href="{{ prevSol.url | url }}">{{ prevSol.data.title }}</a>
-      </p>
-    {% endif %}
-    {% if nextSol.url %}
-      <p>
-        <strong>Next Solution</strong>: 
-        <a class="next" href="{{ nextSol.url | url }}">{{ nextSol.data.title }}</a>
-      </p>
-    {% endif %}
-    </section>
+		{# navigate previous and next solution #} {% if prevSol.url %}
+		<p>
+			<strong>Previous Solution</strong>:
+			<a class="previous" href="{{ prevSol.url | url }}">{{
+				prevSol.data.title
+			}}</a>
+		</p>
+		{% endif %} {% if nextSol.url %}
+		<p>
+			<strong>Next Solution</strong>:
+			<a class="next" href="{{ nextSol.url | url }}">{{
+				nextSol.data.title
+			}}</a>
+		</p>
+		{% endif %}
+	</section>
 </div>
