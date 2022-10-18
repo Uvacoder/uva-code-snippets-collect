@@ -7,6 +7,9 @@
 ### TODO
 
 - add all solutions to project and link them in readme
+
 - add 404 page
+- change color themes for monochromatic safari
 - create own next/prev solution
+- explicit img size
 - add footer and header content

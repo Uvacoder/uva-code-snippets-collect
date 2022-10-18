@@ -8,9 +8,7 @@ module.exports = function (eleventyConfig) {
 
 	// add safe external links in markdown
 	eleventyConfig.addShortcode("mdExternalLink", function (text, url) {
-		return `<a href="${url}" target="_blank" rel="noopener noreferrer">
-			${text}
-		</a>`;
+		return `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
 	});
 
 	// Build the collection of solutions for previous-next style navigation
@@ -22,7 +20,7 @@ module.exports = function (eleventyConfig) {
 				return a.inputPath.localeCompare(b.inputPath);
 			});
 
-		// Adds {{ prevSol.url }} {{ prevSol.data.title }}, etc, to our njks templates
+		// Adds previous and next solution data to each solution
 		for (let i = 0; i < solutions.length; i++) {
 			const prevSol = solutions[i - 1];
 			const nextSol = solutions[i + 1];

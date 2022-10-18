@@ -6,7 +6,7 @@ layout: base.njk
 
 ## Outline
 
-List of my solutions to some coding problems on [Leetcode](https://leetcode.com) and [binarysearch](https://binarysearch.com).
+> List of my solutions to some coding problems on {% mdExternalLink 'Leetcode' 'https://leetcode.com' %} and {% mdExternalLink 'binarysearch' 'https://binarysearch.com' %}.
 
 <ul>
 {%- for solution in collections.solutions | sort -%}
