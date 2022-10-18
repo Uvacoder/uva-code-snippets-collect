@@ -21,6 +21,8 @@ body > * {
 	scroll-behavior: smooth;
 	scrollbar-width: thin;
 	line-height: 1.5;
+	overflow-wrap: anywhere;
+	word-wrap: anywhere;
 }
 
 a {
@@ -101,6 +103,7 @@ footer img {
 }
 
 .solution > .header {
+	width: 100%;
 	display: flex;
 	gap: 0.5rem;
 	align-items: center;
@@ -125,7 +128,7 @@ a,
 }
 
 .solution > .header > * {
-	flex-shrink: 0;
+	flex-shrink: 1;
 }
 
 .content {
@@ -171,8 +174,8 @@ a,
 	bottom: 0;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	justify-content: center;
-	margin-top: -15rem;
 }
 
 .home-link {
