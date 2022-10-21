@@ -7,3 +7,4 @@
 ### TODO
 
 - add all solutions to project and link them in readme
+- header title overflow bug
