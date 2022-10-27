@@ -16,29 +16,25 @@ layout: base.njk
 				stroke-linejoin="round"
 				d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 		</svg>
-		<p>{{ title }}</p>
+		<h1>{{ title }}</h1>
 	</section>
 
 	{# list tags inline #}
 	<section class="tags">
 		{% for tag in tags %}
-		  <code>{{ tag }}</code>
+		<code>{{ tag }}</code>
 		{% endfor %}
 	</section>
 
 	<article>
 		{# External Problem URL: binarysearch or Leetcode #}
 		<span class="content">
-			<strong>The Problem</strong>: {% mdExternalLink title, problemUrl %} 
-      {# add platform icon #} 
-      {% set lc = r/leetcode/g %}
-      {% if lc.test(problemUrl) %}
-			  <img src="{{ '/assets/leetcode.png' | url }}" />
-			{% endif %} 
-      
-      {% set bs = r/binarysearch/g %}
-      {% if bs.test(problemUrl) %}
-			  <img src="{{ '/assets/binarysearch.png' | url }}" />
+			<strong>The Problem</strong>: {% mdExternalLink title, problemUrl %} {#
+			add platform icon #} {% set lc = r/leetcode/g %} {% if lc.test(problemUrl)
+			%}
+			<img src="{{ '/assets/leetcode.png' | url }}" />
+			{% endif %} {% set bs = r/binarysearch/g %} {% if bs.test(problemUrl) %}
+			<img src="{{ '/assets/binarysearch.png' | url }}" />
 			{% endif %}
 		</span>
 

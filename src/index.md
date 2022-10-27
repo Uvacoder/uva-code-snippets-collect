@@ -4,7 +4,7 @@ description: List of my solutions to some coding problems on leetcode.com and bi
 layout: base.njk
 ---
 
-## Outline
+# Outline
 
 > List of my solutions to some coding problems on {% mdExternalLink 'Leetcode' 'https://leetcode.com' %} and {% mdExternalLink 'binarysearch' 'https://binarysearch.com' %}.
 

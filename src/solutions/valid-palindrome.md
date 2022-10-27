@@ -3,10 +3,13 @@ title: Valid Palindrome
 problemUrl: https://leetcode.com/problems/valid-palindrome/
 tags:
   - javascript
+  - python
   - palindrome
 ---
 
 **My Solution**:
+
+## JavaScript
 
 ```js
 /**
@@ -20,4 +23,13 @@ var isPalindrome = function (s) {
 
 	return stripped === reversed;
 };
+```
+
+## Python
+
+```py
+def isPalindrome(self, s: str) -> bool:
+    my_str = ''.join(c for c in s if c.isalnum()).lower()
+
+    return my_str == my_str[::-1]
 ```
