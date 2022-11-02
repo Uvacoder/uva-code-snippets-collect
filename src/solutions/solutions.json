@@ -1,5 +1,6 @@
 {
 	"layout": "solution",
 	"permalink": "/{{ page.fileSlug | url }}/",
-	"tags": "solutions"
+	"tags": "solutions",
+	"feedUrl": "feed.xml"
 }
