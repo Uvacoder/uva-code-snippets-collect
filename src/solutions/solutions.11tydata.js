@@ -1,12 +1,15 @@
 // adds contextual `leetcode` or `binarysearch` tag to each solution
 module.exports = {
 	eleventyComputed: {
+		// compute platform (e.g. leetcode) from problem url
+		platform: (data) => {
+			let urlHostname = new URL(`${data.problemUrl}`).hostname.split(".");
+			let platform = urlHostname[urlHostname.length - 2];
+			return `${platform.toLowerCase()}`;
+		},
+		// add platform to tags list
 		tags: (data) => {
-			if (data.problemUrl.toLowerCase().includes("leetcode")) {
-				return ["leetcode", ...data.tags];
-			} else if (data.problemUrl.toLowerCase().includes("binarysearch")) {
-				return ["binarysearch", ...data.tags];
-			}
+			return [`${data.platform}`, ...data.tags];
 		}
 	}
 };

@@ -5,7 +5,7 @@ layout: false
 override:tags: []
 metadata:
   title: Coding Problem Solutions
-  subtitle: List of my solutions to some coding problems on leetcode.com and binarysearch.com
+  subtitle: List of my solutions to some coding problems on coding platforms like Leetcode
   language: en
   url: https://oneminch.dev/coding-problem-solutions/
   feedUrl: https://oneminch.dev/coding-problem-solutions/feed.xml
@@ -24,7 +24,6 @@ metadata:
 	<id>{{ metadata.url }}</id>
 	<author>
 		<name>{{ metadata.author.name }}</name>
-		<!-- <github>{{ metadata.author.username }}</github> -->
 	</author>
 	{%- for post in collections.solutions | reverse %} {%- set absolutePostUrl =
 	post.metadata.url | absoluteUrl(metadata.url) %}

@@ -5,7 +5,7 @@ layout: base.njk
 <div class="solution">
 	{# link to homepage and current problem title #}
 	<section class="header">
-		<a href="{{ '/' | url }}">Outline</a>
+		<h2><a href="{{ '/' | url }}">Outline</a></h2>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="none"
@@ -27,15 +27,11 @@ layout: base.njk
 	</section>
 
 	<article>
-		{# External Problem URL: binarysearch or Leetcode #}
+		{# External Problem URL: binarysearch, Leetcode or Coderbyte #}
 		<span class="content">
-			<strong>The Problem</strong>: {% mdExternalLink title, problemUrl %} {#
-			add platform icon #} {% set lc = r/leetcode/g %} {% if lc.test(problemUrl)
-			%}
-			<img src="{{ '/assets/leetcode.png' | url }}" />
-			{% endif %} {% set bs = r/binarysearch/g %} {% if bs.test(problemUrl) %}
-			<img src="{{ '/assets/binarysearch.png' | url }}" />
-			{% endif %}
+			<strong>The Problem</strong>: {% mdExternalLink title, problemUrl %}
+      {% set imgUrl = ['/assets/', platform, '.png'] | join %}
+      <img src="{{ imgUrl | url }}" alt="{{ platform | capitalize }}" title="{{ platform | capitalize }}" />
 		</span>
 
 		{# Solution rendered from respective markdown files #}

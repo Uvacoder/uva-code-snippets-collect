@@ -15,11 +15,13 @@ module.exports = function (eleventyConfig) {
 
 	// Build the collection of solutions for previous-next style navigation
 	eleventyConfig.addCollection("solutions", function (collection) {
-		// get list of solutions in ascending order
+		// get list of solutions sorted in ascending order by title
 		const solutions = collection
 			.getFilteredByTag("solutions")
 			.sort(function (a, b) {
-				return a.inputPath.localeCompare(b.inputPath);
+				return a.data.title
+					.toLowerCase()
+					.localeCompare(b.data.title.toLowerCase());
 			});
 
 		// Adds previous and next solution data to each solution
